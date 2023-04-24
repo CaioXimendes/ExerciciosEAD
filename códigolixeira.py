@@ -28,7 +28,7 @@ while pergunta_menu != 3:
                     pergunta_decisao = input("Você tem certeza de que quer excluir? Sim ou Não\n")
                     match pergunta_decisao:
                         case "Sim":
-                            lixeira.__delitem__(lixeira[posicao_item])
+                            del lixeira[posicao_item]
                         case "Não":
                             break
                 case 3:
@@ -42,9 +42,10 @@ while pergunta_menu != 3:
             match pergunta_menu2:
                 case "excluir":
                     posicao_item = int(input("Informe qual item da lixeira você quer excluir:\n"))
-                    lixeira.__delitem__(lixeira[posicao_item])
+                    del lixeira[posicao_item]
                     break
                 case "sair":
                     print("Obrigado por usar a lixeira!!")
+                    pergunta_menu = 3
                     break
 
